@@ -13,6 +13,7 @@ export default function AgeCalculator() {
     } else {
       setAge(null);
     }
+
   };
 
   return (
