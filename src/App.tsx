@@ -1,8 +1,11 @@
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import PasswordInput from "./PasswordInput.tsx";
+import PasswordStrength from "./PasswordStrength.tsx";
 
 function App() {
+  const [password, setPassword] = useState("");
   return (
     <>
       <div>
@@ -22,6 +25,11 @@ function App() {
       <p className='read-the-docs'>
         Click on the Vite and React logos to learn more
       </p>
+       <div>
+            <h3>Password Checker</h3>
+            <PasswordInput setPassword={setPassword} />
+            <PasswordStrength password={password}/>
+        </div>
     </>
   );
 }
