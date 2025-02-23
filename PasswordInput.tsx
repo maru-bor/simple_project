@@ -1,17 +1,14 @@
-import { useState } from 'react';
+interface PasswordInputProp{
+    setPassword: (password : string) => void;
+}
 
+export default function PasswordInput({setPassword} : PasswordInputProp){
 
-export default function PasswordInput(){
-  const [password, setPassword] = useState<string | null>("password");
-
-  return (
-    <div>
-      <label>
-        Zadej heslo:
-      </label>
-      <input type="password" value={password ?? ""} onChange={() => setPassword}/>
-    </div>
-
-  )
-
+    return (
+        <input
+            type="password"
+            placeholder="Enter your password"
+            onChange={(e) => setPassword(e.target.value)}
+        />
+    );
 }
