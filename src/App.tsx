@@ -1,8 +1,9 @@
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
-import PasswordInput from "./PasswordInput.tsx";
-import PasswordStrength from "./PasswordStrength.tsx";
+import {useState} from 'react';
+import PasswordInput from "simple_project/PasswordInput.tsx";
+import PasswordStrength from "simple_project/PasswordStrength.tsx";
 
 function App() {
   const [password, setPassword] = useState("");
